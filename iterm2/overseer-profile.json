@@ -1,0 +1,17 @@
+{
+  "Profiles": [
+    {
+      "Name": "Overseer",
+      "Guid": "6f7e2b1c-overseer-claude-sessions",
+      "Tags": ["overseer"],
+      "Custom Command": "Yes",
+      "Command": "/opt/homebrew/opt/node@24/bin/node __HOME__/Projects/claude-overseer/cli/overseer.mjs",
+      "Custom Directory": "Yes",
+      "Working Directory": "__HOME__",
+      "Columns": 140,
+      "Rows": 40,
+      "Use Custom Tab Color": true,
+      "Tab Color": { "Red Component": 0.86, "Green Component": 0.15, "Blue Component": 0.15, "Alpha Component": 1, "Color Space": "sRGB" }
+    }
+  ]
+}

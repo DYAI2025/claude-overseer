@@ -1,0 +1,6 @@
+{
+  "name": "claude-overseer",
+  "description": "The overseer mod: one terminal that watches all Claude Code sessions and suggests a fix for each problem.",
+  "owner": { "name": "DYAI2025" },
+  "plugins": [{ "name": "overseer", "source": "./" }]
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Deletes session files and kept answers untouched for 14 days (20160 min).
+     A running session rewrites its file every 30 s, so only ended ones go.
+     Install: see README, "Keeping it tidy". -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>claude-overseer.cleanup</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/find</string>
+    <string>__HOME__/.claude/overseer/sessions</string>
+    <string>-type</string>
+    <string>f</string>
+    <string>(</string>
+    <string>-name</string>
+    <string>*.jsonl</string>
+    <string>-o</string>
+    <string>-name</string>
+    <string>*.md</string>
+    <string>)</string>
+    <string>-mmin</string>
+    <string>+20160</string>
+    <string>-print</string>
+    <string>-delete</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>4</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>__HOME__/.claude/overseer/cleanup.log</string>
+  <key>StandardErrorPath</key>
+  <string>__HOME__/.claude/overseer/cleanup.log</string>
+</dict>
+</plist>

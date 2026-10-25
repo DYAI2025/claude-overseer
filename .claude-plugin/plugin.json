@@ -1,0 +1,7 @@
+{
+  "name": "overseer",
+  "version": "0.2.0",
+  "description": "Reports every Claude Code session (project, branch, prompts, tool calls, errors) to ~/.claude/overseer/sessions for the overseer terminal; colours the iTerm2 tab per project.",
+  "author": { "name": "DYAI2025" },
+  "types": "./types/index.d.ts"
+}
